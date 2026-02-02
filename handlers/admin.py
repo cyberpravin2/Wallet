@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from bot.permissions import is_admin
-from bot.utils.settings import (
+from permissions import is_admin
+from utils.settings import (
     set_task_upload_fee,
     set_withdraw_fee_percent,
     get_task_upload_fee,
