@@ -1,4 +1,4 @@
-from bot.database import wallet_logs_col
+from database import wallet_logs_col
 from datetime import datetime
 
 
