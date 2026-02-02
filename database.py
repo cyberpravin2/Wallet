@@ -4,18 +4,18 @@ from bot.config import MONGO_URI, DB_NAME
 client = MongoClient(MONGO_URI)
 db = client[DB_NAME]
 
-# Core collections
+# Users & Wallet
 users_col = db.users
 wallet_logs_col = db.wallet_logs
 
-# Money flow
+# Money flows
 deposits_col = db.deposits
 withdraws_col = db.withdraws
 
-# Task system
+# Tasks
 tasks_col = db.tasks
 task_submissions_col = db.task_submissions
 
-# Disputes & settings
+# Disputes & Settings
 disputes_col = db.disputes
 settings_col = db.settings
