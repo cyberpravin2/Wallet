@@ -4,8 +4,8 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from pyrogram import Client
-from bot.config import BOT_TOKEN
-from bot.handlers import start, wallet, admin, admin_roles
+from config import BOT_TOKEN
+from handlers import start, wallet, admin, admin_roles
 
 app = Client(
     "monkey_wallet_bot",
