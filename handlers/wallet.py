@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from bot.database import users_col, wallet_logs_col
+from database import users_col, wallet_logs_col
 
 
 def register(app: Client):
