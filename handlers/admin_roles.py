@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from bot.permissions import is_admin, ROLE_TASK_ADMIN, ROLE_ADMIN
-from bot.database import users_col
+from permissions import is_admin, ROLE_TASK_ADMIN, ROLE_ADMIN
+from database import users_col
 
 
 def register(app: Client):
