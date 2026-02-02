@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from bot.permissions import is_admin, ROLE_TASK_ADMIN
+from permissions import is_admin, ROLE_TASK_ADMIN
 from database import users_col
 
 def register(app: Client):
