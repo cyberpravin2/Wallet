@@ -1,4 +1,4 @@
-from bot.database import users_col
+from database import users_col
 
 ROLE_USER = "user"
 ROLE_TASK_ADMIN = "task_admin"
