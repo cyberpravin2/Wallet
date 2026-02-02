@@ -1,4 +1,4 @@
-from bot.database import settings_col
+from database import settings_col
 
 DEFAULT_SETTINGS = {
     "task_upload_fee": 1,        # ₹
