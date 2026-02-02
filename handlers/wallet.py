@@ -1,23 +1,14 @@
 from pyrogram import Client, filters
-from pyrogram.types import Message
-
-from database import users_col, wallet_logs_col
-
+from database import users_col
 
 def register(app: Client):
 
     @app.on_message(filters.command("balance"))
-    async def balance_handler(client: Client, message: Message):
-        user_id = message.from_user.id
-
-        user = users_col.find_one({"user_id": user_id})
-
+    async def balance_handler(client, message):
+        user = users_col.find_one({"user_id": message.from_user.id})
         if not user:
-            return await message.reply_text("❌ Please use /start first.")
-
-        balance = user.get("wallet_balance", 0)
+            return await message.reply_text("Use /start first")
 
         await message.reply_text(
-            "🐒 **Monkey Wallet Balance**\n\n"
-            f"💰 Balance: ₹{balance}"
+            f"💰 Your balance: ₹{user.get('wallet_balance', 0)}"
         )
