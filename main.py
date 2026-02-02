@@ -1,19 +1,17 @@
-from pyrogram import Client
+import sys
+import os
 
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from pyrogram import Client
 from bot.config import BOT_TOKEN
-from bot.handlers import (
-    start,
-    wallet,
-    admin,
-    admin_roles
-)
+from bot.handlers import start, wallet, admin, admin_roles
 
 app = Client(
     "monkey_wallet_bot",
     bot_token=BOT_TOKEN
 )
 
-# Register handlers
 start.register(app)
 wallet.register(app)
 admin.register(app)
