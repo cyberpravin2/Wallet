@@ -1,5 +1,5 @@
 from pyrogram import Client, filters
-from bot.database import users_col
+from database import users_col
 
 def register(app: Client):
 
